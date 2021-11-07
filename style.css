@@ -1,0 +1,137 @@
+@import  url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+html{
+    background: linear-gradient(#af67e9,
+     #6565e7);
+    /* min-height: 100%; */
+}
+body{
+    font-family: "kumbh sans", sans-serif;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.faq{
+    width: 65%;
+    min-height: 450px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /*https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.faq .ilustração{
+    position: relative;
+    left: -120px;
+    width: 50%;
+    margin: 50px 0;
+}
+
+.faq .conteúdo{
+    width: 40%;
+    padding-bottom: 20;
+}
+
+.faq .conteúdo h1{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.faq .conteúdo .items{
+    list-style-type: none;
+}
+
+.faq .conteúdo .items .item{
+    cursor: pointer;
+    background-image: url(imagens/icone-seta-pra-baixo.png);
+    background-repeat: no-repeat;
+    background-position: top 9px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc 
+    
+}
+
+.faq .conteúdo .items .item:last-child{
+    border-bottom: none;
+}
+
+.item .pergunta{
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 90%;
+    transition: 0.2s ease;
+}
+
+.item .pergunta:hover{
+    color: #f47c57;
+}
+
+.item .resposta{
+    display: none;
+    padding-bottom: 15px;
+}
+
+/* ESTILOS DO ITEM ATIVO*/
+.faq .items .item.ativo h2 {
+    font-weight: 700;
+}
+
+.faq .items .item.ativo .resposta {
+    display: block;
+}
+
+.faq .items .item.ativo {
+    background-image: url(imagens/icone-seta-pra-cima.png);
+}
+
+
+/*RESPONSIVO*/
+@media (max-width: 1140px) {
+    .faq { 
+        flex-direction: column;
+        width: 90%;
+    }
+    .faq .conteúdo{
+        width: 100%;
+    }
+
+    .faq .conteúdo h1{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .faq .items{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .faq .items .pergunta{
+        font-size: 16px;
+    }
+
+    .faq .ilustração{
+        width: 40%;
+        left: 0;
+        margin: 30px 0;
+    }
+    
+
+@media(max-width: 425px){
+    .faq {
+        height: 540px;
+    }
+}
+
+}
